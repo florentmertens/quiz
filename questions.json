@@ -1,0 +1,587 @@
+[
+  {
+    "question": "Quel est le plus grand océan de la Terre ?",
+    "options": [
+      "Océan Atlantique",
+      "Océan Pacifique",
+      "Océan Indien",
+      "Océan Arctique"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’animal terrestre le plus rapide ?",
+    "options": ["Gazelle", "Guépard", "Lion", "Autruche"],
+    "answer": 1
+  },
+  {
+    "question": "Dans quel pays se trouve la Tour Eiffel ?",
+    "options": ["Espagne", "Italie", "France", "Allemagne"],
+    "answer": 2
+  },
+  {
+    "question": "Combien y a‑t‑il de continents sur Terre ?",
+    "options": ["5", "7", "6", "8"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus long fleuve du monde ?",
+    "options": ["Amazone", "Nil", "Mississippi", "Yangzi Jiang"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle planète est appelée la planète rouge ?",
+    "options": ["Vénus", "Mars", "Jupiter", "Mercure"],
+    "answer": 1
+  },
+  {
+    "question": "Qui a peint la Joconde ?",
+    "options": ["Léonard de Vinci", "Michel-Ange", "Raphaël", "Donatello"],
+    "answer": 0
+  },
+  {
+    "question": "Combien de jours y a‑t‑il en février lors d’une année bissextile ?",
+    "options": ["27", "28", "29", "30"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand mammifère marin ?",
+    "options": ["Requin baleine", "Baleine bleue", "Orque", "Dauphin"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de l’Espagne ?",
+    "options": ["Barcelone", "Madrid", "Valence", "Séville"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’élément chimique dont le symbole est O ?",
+    "options": ["Or", "Oxygène", "Osmium", "Argent"],
+    "answer": 1
+  },
+  {
+    "question": "Quel instrument mesure la température ?",
+    "options": ["Baromètre", "Thermomètre", "Hygromètre", "Altimètre"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand désert chaud du monde ?",
+    "options": ["Gobi", "Kalahari", "Sahara", "Sonora"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l’auteur de “Harry Potter” ?",
+    "options": [
+      "Suzanne Collins",
+      "Stephen King",
+      "J.K. Rowling",
+      "Roald Dahl"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Combien de zéros comporte un million ?",
+    "options": ["4", "5", "6", "7"],
+    "answer": 2
+  },
+  {
+    "question": "Quel pays a inventé les Jeux Olympiques ?",
+    "options": ["Italie", "Grèce", "France", "Chine"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’instrument de musique national de la France ?",
+    "options": ["Violon", "Accordéon", "Harpe", "Guitare"],
+    "answer": 1
+  },
+  {
+    "question": "Quel océan borde la côte est des États‑Unis ?",
+    "options": [
+      "Océan Pacifique",
+      "Océan Atlantique",
+      "Océan Indien",
+      "Océan Austral"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le symbole chimique de l’eau ?",
+    "options": ["CO₂", "H₂O", "O₂", "CH₄"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand pays du monde par superficie ?",
+    "options": ["Canada", "Chine", "Russie", "États‑Unis"],
+    "answer": 2
+  },
+  {
+    "question": "Combien de couleurs y a‑t‑il dans un arc‑en‑ciel ?",
+    "options": ["5", "6", "7", "8"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus petit os du corps humain ?",
+    "options": ["Fémur", "Étrier (oreille)", "Tibia", "Radius"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la langue la plus parlée dans le monde ?",
+    "options": ["Anglais", "Espagnol", "Mandarin", "Français"],
+    "answer": 2
+  },
+  {
+    "question": "Qui a découvert la gravité en observant une pomme tomber ?",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Nikola Tesla"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de l’Italie ?",
+    "options": ["Milan", "Venise", "Rome", "Florence"],
+    "answer": 2
+  },
+  {
+    "question": "Quel animal est le roi des animaux ?",
+    "options": ["Tigre", "Éléphant", "Lion", "Gorille"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle ville est surnommée “la ville lumière” ?",
+    "options": ["Londres", "Tokyo", "Paris", "New York"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le métal le plus léger ?",
+    "options": ["Or", "Lithium", "Aluminium", "Titane"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus haut sommet du monde ?",
+    "options": ["Mont Kilimandjaro", "K2", "Mont Elbrouz", "Mont Everest"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est l’auteur de “Le Petit Prince” ?",
+    "options": [
+      "Jules Verne",
+      "Victor Hugo",
+      "Antoine de Saint-Exupéry",
+      "Marcel Proust"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Combien y a‑t‑il de planètes dans le système solaire ?",
+    "options": ["7", "8", "9", "10"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’instrument principal dans un orchestre symphonique ?",
+    "options": ["Harpe", "Trompette", "Violon", "Flûte"],
+    "answer": 2
+  },
+  {
+    "question": "Quel animal pond des œufs et allaite ses petits ?",
+    "options": ["Kangourou", "Échidné", "Koala", "Ours"],
+    "answer": 1
+  },
+  {
+    "question": "Quel pays est connu comme le pays du Soleil-Levant ?",
+    "options": ["Chine", "Inde", "Japon", "Corée du Sud"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la monnaie du Royaume-Uni ?",
+    "options": ["Euro", "Dollar", "Livre sterling", "Franc"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le premier élément du tableau périodique ?",
+    "options": ["Hélium", "Carbone", "Hydrogène", "Oxygène"],
+    "answer": 2
+  },
+  {
+    "question": "Qui a écrit “Roméo et Juliette” ?",
+    "options": [
+      "Victor Hugo",
+      "William Shakespeare",
+      "Molière",
+      "Charles Dickens"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Dans quel pays se trouve la Grande Muraille ?",
+    "options": ["Mongolie", "Chine", "Japon", "Inde"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le sport national du Japon ?",
+    "options": ["Karaté", "Sumo", "Judo", "Baseball"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’élément chimique le plus abondant dans l’atmosphère terrestre ?",
+    "options": ["Oxygène", "Azote", "Dioxyde de carbone", "Argon"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de l’Australie ?",
+    "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand désert froid du monde ?",
+    "options": ["Toundra", "Sahara", "Gobi", "Antarctique"],
+    "answer": 3
+  },
+  {
+    "question": "Combien de mètres y a‑t‑il dans un kilomètre ?",
+    "options": ["500", "1000", "1500", "2000"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mammifère peut voler ?",
+    "options": ["Ecureuil volant", "Chauve-souris", "Colibri", "Papillon"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle peinture est accrochée au Musée du Louvre ?",
+    "options": ["Les Nymphéas", "La Joconde", "Guernica", "Le Cri"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand lac d’eau douce en volume ?",
+    "options": ["Lac Supérieur", "Baïkal", "Lac Victoria", "Lac Michigan"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de la Russie ?",
+    "options": ["Saint-Pétersbourg", "Moscou", "Kazan", "Novossibirsk"],
+    "answer": 1
+  },
+  {
+    "question": "Combien de pattes a une araignée ?",
+    "options": ["6", "8", "10", "12"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’instrument de musique à vent le plus petit ?",
+    "options": ["Trombone", "Saxophone", "Piccolo", "Flûte alto"],
+    "answer": 2
+  },
+  {
+    "question": "Qui a écrit “Les Misérables” ?",
+    "options": [
+      "Émile Zola",
+      "Gustave Flaubert",
+      "Victor Hugo",
+      "Honoré de Balzac"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand pays d’Afrique ?",
+    "options": ["Nigeria", "Algérie", "Afrique du Sud", "Égypte"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale du Canada ?",
+    "options": ["Toronto", "Ottawa", "Vancouver", "Montréal"],
+    "answer": 1
+  },
+  {
+    "question": "Combien de joueurs y a‑t‑il dans une équipe de football (soccer) ?",
+    "options": ["9", "10", "11", "12"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le principal ingrédient du guacamole ?",
+    "options": ["Tomate", "Avocat", "Poivron", "Oignon"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le pays le plus peuplé du monde ?",
+    "options": ["États‑Unis", "Chine", "Inde", "Russie"],
+    "answer": 1
+  },
+  {
+    "question": "Quel oiseau est symbole de la paix ?",
+    "options": ["Corbeau", "Aigle", "Colombe", "Perroquet"],
+    "answer": 2
+  },
+  {
+    "question": "Qui a inventé l’ampoule électrique ?",
+    "options": [
+      "Nikola Tesla",
+      "Alexander Graham Bell",
+      "Thomas Edison",
+      "Benjamin Franklin"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand reptile terrestre ?",
+    "options": [
+      "Crocodile marin",
+      "Python birman",
+      "Serpent taïpan",
+      "Anaconda"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de la Suède ?",
+    "options": ["Oslo", "Helsinki", "Stockholm", "Copenhague"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le principal gaz responsable de l’effet de serre ?",
+    "options": ["Oxygène", "Dioxyde de carbone", "Azote", "Hydrogène"],
+    "answer": 1
+  },
+  {
+    "question": "Quel instrument de musique a 88 touches ?",
+    "options": ["Orgue", "Clavier électronique", "Piano", "Xylophone"],
+    "answer": 2
+  },
+  {
+    "question": "Quel pays est surnommé “Terre du Milieu” dans la mythologie moderne ?",
+    "options": ["Narnia", "Terre du Milieu (Tolkien)", "Westeros", "Hogwarts"],
+    "answer": 1
+  },
+  {
+    "question": "Combien de faces a un cube ?",
+    "options": ["6", "8", "12", "20"],
+    "answer": 0
+  },
+  {
+    "question": "Quel héros a un marteau magique nommé Mjöllnir ?",
+    "options": ["Zeus", "Thor", "Hercules", "Odin"],
+    "answer": 1
+  },
+  {
+    "question": "Quel fleuve traverse Paris ?",
+    "options": ["La Garonne", "Le Rhône", "La Seine", "Le Danube"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand oiseau capable de voler ?",
+    "options": [
+      "Aigle royal",
+      "Albatros hurleur",
+      "Condor des Andes",
+      "Pélican blanc"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Combien de minutes y a‑t‑il dans une heure ?",
+    "options": ["50", "60", "70", "100"],
+    "answer": 1
+  },
+  {
+    "question": "Qui a peint \"Guernica\" ?",
+    "options": [
+      "Salvador Dalí",
+      "Pablo Picasso",
+      "Henri Matisse",
+      "Claude Monet"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand des cinq lacs des Grands Lacs ?",
+    "options": ["Lac Huron", "Lac Érié", "Lac Michigan", "Lac Supérieur"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le rôle du pancréas dans le corps ?",
+    "options": [
+      "Filtrer le sang",
+      "Stocker la bile",
+      "Produire de l’insuline",
+      "Produire des globules rouges"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel métal est magnétique à température ambiante ?",
+    "options": ["Aluminium", "Cuivre", "Fer", "Or"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle ville est construite sur 14 îles et a des canaux célèbres ?",
+    "options": ["Amsterdam", "Stockholm", "Venise", "Bruges"],
+    "answer": 2
+  },
+  {
+    "question": "Quel film a remporté l’Oscar du meilleur film en 2020 ?",
+    "options": ["Joker", "Parasite", "1917", "Once Upon a Time in Hollywood"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la langue officielle du Brésil ?",
+    "options": ["Espagnol", "Portugais", "Français", "Anglais"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand instrument à vent ?",
+    "options": ["Trompette", "Clarinette", "Saxophone", "Orgue"],
+    "answer": 3
+  },
+  {
+    "question": "Quelle est la formule chimique du sel de table ?",
+    "options": ["HCl", "NaCl", "KCl", "CaCl₂"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de l’Égypte ?",
+    "options": ["Alexandrie", "Le Caire", "Louxor", "Thèbes"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand reptile aquatique ?",
+    "options": [
+      "Serpent de mer",
+      "Tortue géante",
+      "Crocodile marin",
+      "Lézard d’eau"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qui est l’auteur de “1984” ?",
+    "options": [
+      "Aldous Huxley",
+      "George Orwell",
+      "Ray Bradbury",
+      "Philip K. Dick"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel organe pompe le sang dans le corps ?",
+    "options": ["Poumons", "Foie", "Reins", "Cœur"],
+    "answer": 3
+  },
+  {
+    "question": "Quel pays est à la fois en Asie et en Europe ?",
+    "options": ["Grèce", "Turquie", "Russie", "Géorgie"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand pays d’Amérique du Sud ?",
+    "options": ["Argentine", "Brésil", "Pérou", "Colombie"],
+    "answer": 1
+  },
+  {
+    "question": "Combien de joueurs y a‑t‑il dans une équipe de basket-ball ?",
+    "options": ["4", "5", "6", "7"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la monnaie du Japon ?",
+    "options": ["Won", "Yuan", "Yen", "Dollar"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le deuxième élément le plus abondant dans l’univers ?",
+    "options": ["Carbone", "Oxygène", "Hélium", "Hydrogène"],
+    "answer": 2
+  },
+  {
+    "question": "Qui a inventé la radio ?",
+    "options": [
+      "Thomas Edison",
+      "Guglielmo Marconi",
+      "Alexander Graham Bell",
+      "Nikola Tesla"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand canyon du monde ?",
+    "options": [
+      "Canyon du Colca",
+      "Grand Canyon",
+      "Tiger Leaping Gorge",
+      "Cotahuasi Canyon"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de l’Inde ?",
+    "options": ["Mumbai", "Kolkata", "New Delhi", "Bangalore"],
+    "answer": 2
+  },
+  {
+    "question": "Quel animal est connu pour changer de couleur ?",
+    "options": ["Caméléon", "Pieuvre", "Poisson-clown", "Seiche"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l’homme le plus rapide sur 100m ?",
+    "options": ["Tyson Gay", "Justin Gatlin", "Usain Bolt", "Yohan Blake"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle structure protège le cerveau ?",
+    "options": ["Côtes", "Colonne vertébrale", "Boîte crânienne", "Sternum"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand producteur de café au monde ?",
+    "options": ["Colombie", "Brésil", "Vietnam", "Éthiopie"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’organe de la vue ?",
+    "options": ["Oreille", "Nez", "Œil", "Peau"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le principal composant de l’air que nous respirons ?",
+    "options": ["Oxygène", "Dioxyde de carbone", "Azote", "Vapeur d’eau"],
+    "answer": 2
+  },
+  {
+    "question": "Quel joueur de tennis a remporté le plus de titres du Grand Chelem ?",
+    "options": [
+      "Roger Federer",
+      "Rafael Nadal",
+      "Novak Djokovic",
+      "Pete Sampras"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la capitale de l’Allemagne ?",
+    "options": ["Munich", "Francfort", "Berlin", "Hambourg"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand mammifère terrestre ?",
+    "options": ["Hippopotame", "Éléphant d’Afrique", "Girafe", "Rhinocéros"],
+    "answer": 1
+  },
+  {
+    "question": "Combien d’os compte le corps humain adulte ?",
+    "options": ["201", "206", "210", "215"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle chaîne de montagnes forme une frontière naturelle entre la France et l’Espagne ?",
+    "options": ["Alpes", "Jura", "Pyrénées", "Massif Central"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l’instrument de musique national de l’Écosse ?",
+    "options": ["Harpe", "Violon", "Cornemuse", "Accordéon"],
+    "answer": 2
+  }
+]

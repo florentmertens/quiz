@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <p class="error-message"></p>
+    <div class="container">
+      <header>
+        <h1 class="title">Quizz Culture General</h1>
+        <p class="subtitle">Testez vos connaissances en culture générale</p>
+      </header>
+      <main>
+        <section class="quiz">
+          <div class="quiz-info">
+            <div class="question-nb">Question <span>1</span>/10</div>
+            <div class="current-score">Score: <span>0</span></div>
+          </div>
+          <p class="question">
+            Quel joueur a remporté le plus de Ballons d'Or ?
+          </p>
+          <div class="answers">
+            <button class="answer">Lionel Messi</button>
+            <button class="answer">Cristiano Ronaldo</button>
+            <button class="answer">Michel Platini</button>
+            <button class="answer">Johan Cruyff</button>
+          </div>
+          <p class="feedback-message"></p>
+          <button class="next-question-btn">Suivant</button>
+        </section>
+        <section class="result">
+          <h1>Score</h1>
+          <p class="score">0</p>
+          <button onclick="restartQuiz()" class="replay">Rejouer</button>
+        </section>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
