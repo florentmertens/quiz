@@ -27,7 +27,7 @@
   {
     "question": "Quel est le plus long fleuve du monde ?",
     "options": ["Amazone", "Nil", "Mississippi", "Yangzi Jiang"],
-    "answer": 1
+    "answer": 0
   },
   {
     "question": "Quelle planète est appelée la planète rouge ?",
@@ -542,7 +542,7 @@
   {
     "question": "Quel est le pays le plus peuplé du monde ?",
     "options": ["États‑Unis", "Chine", "Inde", "Russie"],
-    "answer": 1
+    "answer": 2
   },
   {
     "question": "Quel oiseau est symbole de la paix ?",
@@ -560,14 +560,14 @@
     "answer": 2
   },
   {
-    "question": "Quel est le plus grand reptile terrestre ?",
+    "question": "Quel est le plus grand reptile ?",
     "options": [
       "Crocodile marin",
       "Python birman",
       "Serpent taïpan",
       "Anaconda"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
     "question": "Quelle est la capitale de la Suède ?",
@@ -818,5 +818,845 @@
     "question": "Quel est l’instrument de musique national de l’Écosse ?",
     "options": ["Harpe", "Violon", "Cornemuse", "Accordéon"],
     "answer": 2
+  },
+  {
+    "question": "Quel est le plus haut volcan actif du monde ?",
+    "options": ["Mont Etna", "Ojos del Salado", "Kilimandjaro", "Mauna Loa"],
+    "answer": 1
+  },
+  {
+    "question": "Quel pays a organisé la Coupe du Monde de la FIFA 2018 ?",
+    "options": ["Brésil", "Russie", "Qatar", "Afrique du Sud"],
+    "answer": 1
+  },
+  {
+    "question": "Qui a écrit « Les Fleurs du mal » ?",
+    "options": [
+      "Arthur Rimbaud",
+      "Charles Baudelaire",
+      "Paul Verlaine",
+      "Victor Hugo"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le seul mammifère capable de voler activement ?",
+    "options": ["Ecureuil volant", "Colibri", "Chauve-souris", "Albatros"],
+    "answer": 2
+  },
+  {
+    "question": "Dans quelle ville se trouve la statue du Christ Rédempteur ?",
+    "options": ["Lisbonne", "Rio de Janeiro", "Mexico", "Rome"],
+    "answer": 1
+  },
+  {
+    "question": "Quel élément chimique a pour symbole Au ?",
+    "options": ["Argent", "Or", "Arsenic", "Aluminium"],
+    "answer": 1
+  },
+  {
+    "question": "Qui a composé la Symphonie n°9 (« Ode à la joie ») ?",
+    "options": ["Mozart", "Beethoven", "Brahms", "Chopin"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand lac salé au monde ?",
+    "options": ["Lac Supérieur", "Mer Morte", "Lac Baïkal", "Grand Lac Salé"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le pays le plus peuplé d’Afrique ?",
+    "options": ["Nigeria", "Égypte", "Éthiopie", "Afrique du Sud"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la monnaie officielle de la Suède ?",
+    "options": ["Euro", "Couronne suédoise", "Mark", "Ruble"],
+    "answer": 1
+  },
+  {
+    "question": "Quel peintre est célèbre pour ses tournesols ?",
+    "options": [
+      "Claude Monet",
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Salvador Dalí"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom du premier satellite artificiel lancé dans l’espace ?",
+    "options": ["Apollo 11", "Sputnik 1", "Voyager 1", "Hubble"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de l’Argentine ?",
+    "options": ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le plus long tunnel sous-marin du monde ?",
+    "options": [
+      "Tunnel du Seikan",
+      "Tunnel sous la Manche",
+      "Tunnel du Saint-Gothard",
+      "Tunnel du Brenner"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel océan borde l’Afrique de l’Est ?",
+    "options": ["Atlantique", "Pacifique", "Indien", "Arctique"],
+    "answer": 2
+  },
+  {
+    "question": "Qui a fondé l’Empire mongol au XIIIᵉ siècle ?",
+    "options": ["Kubilai Khan", "Gengis Khan", "Attila", "Tamerlan"],
+    "answer": 1
+  },
+  {
+    "question": "Quel pays a inventé le papier ?",
+    "options": ["Chine", "Égypte", "Grèce", "Inde"],
+    "answer": 0
+  },
+  {
+    "question": "Comment s’appelle la grande muraille située en Inde ?",
+    "options": [
+      "Muraille de Chine",
+      "Muraille de Kumbhalgarh",
+      "Muraille de Gorgan",
+      "Muraille d’Hadrien"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le symbole chimique du sodium ?",
+    "options": ["Na", "S", "So", "Sd"],
+    "answer": 0
+  },
+  {
+    "question": "Quel écrivain russe est l’auteur de « Guerre et Paix » ?",
+    "options": ["Dostoïevski", "Tolstoï", "Tchékhov", "Gogol"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’instrument de musique à cordes le plus petit ?",
+    "options": ["Ukulélé", "Viole d’amour", "Mandoline", "Violoncelle"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le plus grand récif corallien au monde ?",
+    "options": [
+      "Récif de la Barrière de Corail",
+      "Récif de Nouvelle-Calédonie",
+      "Récif de Belize",
+      "Récif des Maldives"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel chimiste a découvert la radioactivité ?",
+    "options": [
+      "Dmitri Mendeleïev",
+      "Marie Curie",
+      "Alessandro Volta",
+      "Antoine Lavoisier"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de la Nouvelle-Zélande ?",
+    "options": ["Auckland", "Christchurch", "Wellington", "Dunedin"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la langue officielle du Canada en plus du français ?",
+    "options": ["Espagnol", "Anglais", "Allemand", "Italien"],
+    "answer": 1
+  },
+  {
+    "question": "Quel peintre espagnol a réalisé Guernica ?",
+    "options": [
+      "Francisco Goya",
+      "Salvador Dalí",
+      "Pablo Picasso",
+      "Joan Miró"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand canyon d’Amérique du Sud ?",
+    "options": ["Colca", "Cotahuasi", "Grand Canyon", "Tiger Leaping Gorge"],
+    "answer": 0
+  },
+  {
+    "question": "Quel fruit est utilisé pour faire le cidre ?",
+    "options": ["Poire", "Pomme", "Cerise", "Raisin"],
+    "answer": 1
+  },
+  {
+    "question": "Qui a remporté le prix Nobel de la paix en 1991 ?",
+    "options": [
+      "Mère Teresa",
+      "Nelson Mandela",
+      "Aung San Suu Kyi",
+      "Mikhail Gorbatchev"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le plus grand lac d’Afrique par superficie ?",
+    "options": ["Lac Victoria", "Lac Tanganyika", "Lac Malawi", "Lac Tchad"],
+    "answer": 0
+  },
+  {
+    "question": "Quel métal a pour symbole Fe ?",
+    "options": ["Fer", "Fluor", "Francium", "Fermium"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom du fleuve qui traverse Londres ?",
+    "options": ["La Tamise", "La Seine", "Le Danube", "Le Rhin"],
+    "answer": 0
+  },
+  {
+    "question": "Quel pape a lancé la Première croisade en 1095 ?",
+    "options": ["Urbain II", "Innocent III", "Clément V", "Grégoire VII"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le plus petit état indépendent du monde ?",
+    "options": ["Monaco", "Vatican", "Nauru", "Saint-Marin"],
+    "answer": 1
+  },
+  {
+    "question": "Quel savant a formulé la loi de la gravitation universelle ?",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Galilée",
+      "Johannes Kepler"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le principal ingrédient du tzatzíki ?",
+    "options": ["Tomate", "Concombre", "Aubergine", "Lait"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de l’Éthiopie ?",
+    "options": ["Adis-Abeba", "Nairobi", "Le Caire", "Khartoum"],
+    "answer": 0
+  },
+  {
+    "question": "Quel océan borde l’Inde ?",
+    "options": ["Atlantique", "Pacifique", "Indien", "Arctique"],
+    "answer": 2
+  },
+  {
+    "question": "Quel écrivain américain a écrit « Moby Dick » ?",
+    "options": [
+      "Herman Melville",
+      "Mark Twain",
+      "Edgar Allan Poe",
+      "Nathaniel Hawthorne"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel compositeur est surnommé le « Roi du Ragtime » ?",
+    "options": [
+      "Scott Joplin",
+      "Duke Ellington",
+      "George Gershwin",
+      "Johann Strauss"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom du désert qui couvre une grande partie de l’Arabie Saoudite ?",
+    "options": ["Sahara", "Gobi", "Rub al-Khali", "Atacama"],
+    "answer": 2
+  },
+  {
+    "question": "Quel appareil mesure la pression atmosphérique ?",
+    "options": ["Thermomètre", "Baromètre", "Hygromètre", "Anémomètre"],
+    "answer": 1
+  },
+  {
+    "question": "Quel pays a pour monnaie le peso ?",
+    "options": ["Mexique", "Brésil", "Russie", "Suède"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le plus long tunnel ferroviaire du monde ?",
+    "options": [
+      "Tunnel sous la Manche",
+      "Tunnel du Saint-Gothard",
+      "Seikan",
+      "Gotthard Base"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le plus haut sommet d’Europe ?",
+    "options": ["Mont Blanc", "Elbrouz", "Grossglockner", "Matterhorn"],
+    "answer": 1
+  },
+  {
+    "question": "Quel peintre hollandais est connu pour ses autoportraits et ses jeux de lumière ?",
+    "options": ["Van Gogh", "Rembrandt", "Vermeer", "Mondrian"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom de la galaxie dans laquelle se trouve la Terre ?",
+    "options": ["Andromède", "Voie lactée", "Sombrero", "Triangulum"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale du Pakistan ?",
+    "options": ["Karachi", "Islamabad", "Lahore", "Peshawar"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’élément chimique le plus léger ?",
+    "options": ["Hydrogène", "Hélium", "Lithium", "Carbone"],
+    "answer": 0
+  },
+  {
+    "question": "Qui est l’auteur de « Don Quichotte » ?",
+    "options": ["Cervantes", "Lope de Vega", "Garcilaso", "Quevedo"],
+    "answer": 0
+  },
+  {
+    "question": "Quel pays a pour capitale Ankara ?",
+    "options": ["Turquie", "Grèce", "Bulgarie", "Roumanie"],
+    "answer": 0
+  },
+  {
+    "question": "Quel matériau est utilisé pour fabriquer des semiconducteurs ?",
+    "options": ["Fer", "Silicium", "Plomb", "Or"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand désert d’Asie ?",
+    "options": ["Sahara", "Gobi", "Karakoum", "Taklamakan"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la monnaie de la Suisse ?",
+    "options": ["Euro", "Franc suisse", "Couronne", "Dollar"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le symbole chimique du mercure ?",
+    "options": ["Me", "Mg", "Hg", "Mn"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la capitale de la Norvège ?",
+    "options": ["Stockholm", "Oslo", "Helsinki", "Copenhague"],
+    "answer": 1
+  },
+  {
+    "question": "Quel philosophe a écrit « Ainsi parlait Zarathoustra » ?",
+    "options": ["Kant", "Nietzsche", "Hegel", "Descartes"],
+    "answer": 1
+  },
+  {
+    "question": "Quel pays est surnommé « le toit du monde » ?",
+    "options": ["Népal", "Tibet", "Pakistan", "Bhoutan"],
+    "answer": 1
+  },
+  {
+    "question": "Quels sont les deux gaz principaux de l’atmosphère terrestre ?",
+    "options": [
+      "Oxygène et azote",
+      "Argon et carbone",
+      "Ozone et hydrogène",
+      "Méthane et hélium"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel pays possède le plus de pyramides ?",
+    "options": ["Mexique", "Soudan", "Égypte", "Chine"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom du train à grande vitesse japonais ?",
+    "options": ["Shinkansen", "Maglev", "TGV", "ICE"],
+    "answer": 0
+  },
+  {
+    "question": "Quel animal marin possède huit bras ?",
+    "options": ["Calmar", "Poulpe", "Pieuvre", "Requin"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de la Colombie ?",
+    "options": ["Medellín", "Bogotá", "Cali", "Cartagena"],
+    "answer": 1
+  },
+  {
+    "question": "Quel compositeur autrichien est célèbre pour ses concertos pour piano ?",
+    "options": ["Mozart", "Beethoven", "Chopin", "Liszt"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le principal ingrédient du houmous ?",
+    "options": ["Pois chiches", "Lentilles", "Haricots blancs", "Pois cassés"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle mer borde la Croatie ?",
+    "options": ["Mer Noire", "Mer Méditerranée", "Mer Adriatique", "Mer Égée"],
+    "answer": 2
+  },
+  {
+    "question": "Quel navigateur a découvert l’Amérique en 1492 ?",
+    "options": ["Vasco de Gama", "Christophe Colomb", "Magellan", "James Cook"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand canal artificiel du monde ?",
+    "options": ["Panama", "Suez", "Gota", "Kiel"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de la Roumanie ?",
+    "options": ["Budapest", "Sofia", "Bucarest", "Belgrade"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand mammifère marin vivant ?",
+    "options": ["Orque", "Requin baleine", "Baleine bleue", "Épaulard"],
+    "answer": 2
+  },
+  {
+    "question": "Qui a rédigé les « Méditations » ?",
+    "options": ["Marc Aurèle", "Épictète", "Sénèque", "Cicéron"],
+    "answer": 0
+  },
+  {
+    "question": "Quel gaz est essentiel à la photosynthèse ?",
+    "options": ["Oxygène", "Dioxyde de carbone", "Azote", "Argon"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom du plus grand océan du monde ?",
+    "options": ["Atlantique", "Pacifique", "Indien", "Arctique"],
+    "answer": 1
+  },
+  {
+    "question": "Quel pays est traversé par le fleuve Mississippi ?",
+    "options": ["Canada", "États-Unis", "Mexique", "Brésil"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand îlot corallien du monde ?",
+    "options": [
+      "Récif de la Barrière de Corail",
+      "Récif de Belize",
+      "Atoll Kingman",
+      "Récif des Maldives"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la capitale du Vietnam ?",
+    "options": ["Ho Chi Minh-Ville", "Hanoï", "Da Nang", "Hue"],
+    "answer": 1
+  },
+  {
+    "question": "Quel auteur français a écrit « L’Étranger » ?",
+    "options": [
+      "Albert Camus",
+      "Jean-Paul Sartre",
+      "Marcel Proust",
+      "André Gide"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le pays d’origine du tango ?",
+    "options": ["Espagne", "Argentine", "Mexique", "Italie"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus haut sommet d’Afrique ?",
+    "options": ["Kilimandjaro", "Mont Kenya", "Toubkal", "Ras Dashen"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le principal composant du verre ?",
+    "options": ["Calcaire", "Silice", "Chaux", "Aluminium"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’auteur de « L’Iliade » et « L’Odyssée » ?",
+    "options": ["Hérodote", "Homère", "Virgile", "Sophocle"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la plus grande île du monde ?",
+    "options": ["Groenland", "Madagascar", "Borneo", "Sumatra"],
+    "answer": 0
+  },
+  {
+    "question": "Quel joueur de football a remporté le Ballon d’Or en 2021 ?",
+    "options": [
+      "Lionel Messi",
+      "Robert Lewandowski",
+      "Karim Benzema",
+      "Cristiano Ronaldo"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom du dieu grec de la guerre ?",
+    "options": ["Zeus", "Hadès", "Arès", "Hermès"],
+    "answer": 2
+  },
+  {
+    "question": "Quel océan borde la côte ouest de l’Afrique ?",
+    "options": ["Atlantique", "Indien", "Pacifique", "Arctique"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la capitale de la Belgique ?",
+    "options": ["Amsterdam", "Bruxelles", "Luxembourg", "Paris"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le principal ingrédient de la paella ?",
+    "options": ["Tomate", "Riz", "Pâtes", "Pommes de terre"],
+    "answer": 1
+  },
+  {
+    "question": "Qui a inventé l’imprimerie à caractères mobiles ?",
+    "options": [
+      "Johannes Gutenberg",
+      "Leonardo da Vinci",
+      "Alfred Nobel",
+      "Galilée"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l’ingrédient de base du fromage roquefort ?",
+    "options": [
+      "Lait de vache",
+      "Lait de chèvre",
+      "Lait de brebis",
+      "Lait de bufflonne"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le nom complet de Léonard de Vinci ?",
+    "options": [
+      "Léonard di Ser Piero da Vinci",
+      "Léonard de Pise",
+      "Léonard Boticelli",
+      "Léonard Michelacci"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la capitale du Chili ?",
+    "options": ["Santiago", "Buenos Aires", "Lima", "Montevideo"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom du mur qui séparait Berlin jusqu’en 1989 ?",
+    "options": [
+      "Rideau de fer",
+      "Mur de Berlin",
+      "Muraille de l’Atlantique",
+      "Grande Muraille"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le principal muscle du bras permettant la flexion ?",
+    "options": ["Triceps", "Biceps", "Deltoïde", "Trapèze"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale du Kenya ?",
+    "options": ["Mombasa", "Kisumu", "Nairobi", "Kampala"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l’auteur des « Trois Mousquetaires » ?",
+    "options": [
+      "Victor Hugo",
+      "Alexandre Dumas",
+      "Gustave Flaubert",
+      "Émile Zola"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel oiseau ne vole pas et est le plus grand au monde ?",
+    "options": ["Autruche", "Émeu", "Manchot", "Dinde"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la capitale de la Tanzanie ?",
+    "options": ["Dar es Salaam", "Dodoma", "Zanzibar", "Mwanza"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le principal constituant du diamant ?",
+    "options": ["Carbone", "Silicium", "Oxygène", "Azote"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la capitale de la Corée du Sud ?",
+    "options": ["Séoul", "Busan", "Pyongyang", "Incheon"],
+    "answer": 0
+  },
+  {
+    "question": "Quel peintre est célèbre pour ses nymphéas ?",
+    "options": ["Monet", "Manet", "Matisse", "Modigliani"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le plus grand désert d’Australie ?",
+    "options": ["Simpson", "Gibson", "Great Sandy", "Tanami"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l’auteur de « Crime et Châtiment » ?",
+    "options": ["Dostoïevski", "Tolstoï", "Tchékhov", "Gogol"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le plus grand port de conteneurs d’Europe ?",
+    "options": ["Rotterdam", "Anvers", "Hambourg", "Le Havre"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom de la plus grande chaîne de montagnes d’Amérique du Sud ?",
+    "options": ["Rocky Mountains", "Andes", "Alpes", "Himalaya"],
+    "answer": 1
+  },
+  {
+    "question": "Quel était le nom du vaisseau de Charles Darwin ?",
+    "options": ["Beagle", "Endeavour", "Discovery", "Victoria"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l’organe principal de la vision ?",
+    "options": ["Œil", "Cerveau", "Oreille", "Peau"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le pays d’origine du samba ?",
+    "options": ["Argentine", "Colombie", "Brésil", "Espagne"],
+    "answer": 2
+  },
+  {
+    "question": "Quel écrivain espagnol a reçu le prix Nobel de littérature en 1989 ?",
+    "options": [
+      "Camilo José Cela",
+      "Gabriel García Márquez",
+      "Mario Vargas Llosa",
+      "Pablo Neruda"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le plus grand lac d’Amérique du Nord par superficie ?",
+    "options": ["Lac Michigan", "Lac Supérieur", "Lac Huron", "Lac Érié"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le principal constituant de l’air respiré (en pourcentage) ?",
+    "options": ["Oxygène", "Azote", "Dioxyde de carbone", "Argon"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’auteur de « Jane Eyre » ?",
+    "options": [
+      "Charlotte Brontë",
+      "Emily Brontë",
+      "Mary Shelley",
+      "Jane Austen"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l’arbre sacré de l’Inde ?",
+    "options": ["Banyan", "Manguier", "Chêne", "Sapin"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l’élément le plus abondant dans le Soleil ?",
+    "options": ["Hélium", "Hydrogène", "Carbone", "Oxygène"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le sport national du Canada ?",
+    "options": ["Football", "Hockey sur glace", "Basket-ball", "Curling"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom de la capitale du Kazakhstan ?",
+    "options": ["Almaty", "Astana", "Chimkent", "Karagandy"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le plus grand récif corallien d’Afrique ?",
+    "options": [
+      "Récif de Sodwana",
+      "Récif de Mombasa",
+      "Récif de Zanzibar",
+      "Récif de Mozambique"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le nom du fleuve le plus long d’Asie ?",
+    "options": ["Yangzi Jiang", "Huang He", "Mékong", "Gange"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le principal producteur mondial de thé ?",
+    "options": ["Inde", "Chine", "Sri Lanka", "Japon"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la capitale de l’Autriche ?",
+    "options": ["Vienne", "Salzbourg", "Innsbruck", "Graz"],
+    "answer": 0
+  },
+  {
+    "question": "Quel océan borde l’Australie à l’est ?",
+    "options": ["Atlantique", "Indien", "Pacifique", "Arctique"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le nom du code de lois romain compilé sous Justinien ?",
+    "options": [
+      "Corpus Juris Civilis",
+      "Magna Carta",
+      "Code Napoléon",
+      "Common Law"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qui a peint « La Nuit étoilée » ?",
+    "options": ["Monet", "Van Gogh", "Picasso", "Matisse"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le principal gaz responsable de l’effet de serre ?",
+    "options": ["Ozone", "Dioxyde de carbone", "Méthane", "Azote"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le pays le plus étendu d’Amérique du Nord ?",
+    "options": ["États-Unis", "Canada", "Mexique", "Brésil"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’instrument de musique national de l’Écosse ?",
+    "options": ["Harpe", "Violon", "Cornemuse", "Accordéon"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la capitale de la Finlande ?",
+    "options": ["Stockholm", "Helsinki", "Oslo", "Copenhague"],
+    "answer": 1
+  },
+  {
+    "question": "Quel animal est le plus grand prédateur terrestre ?",
+    "options": ["Lion", "Ours polaire", "Tigre", "Gorille"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la plus grande île du Japon ?",
+    "options": ["Honshū", "Hokkaidō", "Shikoku", "Kyūshū"],
+    "answer": 0
+  },
+  {
+    "question": "Quel artiste a composé « Le Lac des cygnes » ?",
+    "options": ["Tchaïkovski", "Stravinsky", "Brahms", "Chopin"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom de la galaxie voisine de la nôtre ?",
+    "options": ["M81", "Andromède", "NGC 1300", "Sombrero"],
+    "answer": 1
+  },
+  {
+    "question": "Quel pays a pour abréviation ISO « JP » ?",
+    "options": ["Jordanie", "Japon", "Jamaïque", "Kirghizistan"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom de la plus haute cascade du monde ?",
+    "options": ["Victoria Falls", "Iguazú", "Angel Falls", "Niagara Falls"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le plus grand lac d’eau douce au monde par superficie ?",
+    "options": [
+      "Lac Victoria",
+      "Lac Supérieur",
+      "Lac Tanganyika",
+      "Lac Baïkal"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom de la théorie expliquant l’origine de l’univers ?",
+    "options": ["Big Bang", "Steady State", "Oscillatoire", "Plasma Cosmic"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l’écrivain de « L’Alchimiste » ?",
+    "options": [
+      "Paulo Coelho",
+      "Gabriel García Márquez",
+      "Isabel Allende",
+      "Jorge Luis Borges"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le plus grand organe du corps humain ?",
+    "options": ["Foie", "Peau", "Cœur", "Poumon"],
+    "answer": 1
+  },
+  {
+    "question": "Quel océan borde le Bangladesh ?",
+    "options": [
+      "Océan Pacifique",
+      "Océan Indien",
+      "Océan Atlantique",
+      "Océan Austral"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’auteur de « Macbeth » ?",
+    "options": ["Shakespeare", "Molière", "Corneille", "Victor Hugo"],
+    "answer": 0
+  },
+  {
+    "question": "Quel métal est le plus conducteur d’électricité ?",
+    "options": ["Cuivre", "Aluminium", "Argent", "Or"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la capitale de la Slovaquie ?",
+    "options": ["Prague", "Bratislava", "Budapest", "Varsovie"],
+    "answer": 1
   }
 ]
