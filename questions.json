@@ -95,6 +95,241 @@
     "answer": 1
   },
   {
+    "question": "Quel est le nom de l’école de sorcellerie que fréquente Harry Potter ?",
+    "options": ["Poudlard", "Beauxbâtons", "Durmstrang", "Ilvermorny"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le surnom du LOSC Lille ?",
+    "options": ["Les Dogues", "Les Canaris", "Les Gones", "Les Verts"],
+    "answer": 0
+  },
+  {
+    "question": "En quelle année le LOSC a-t-il remporté son dernier titre de champion de France ?",
+    "options": ["2021", "2011", "2001", "1995"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom du stade actuel du LOSC ?",
+    "options": [
+      "Stade Pierre-Mauroy",
+      "Stade Bollaert",
+      "Stade Vélodrome",
+      "Stade de la Beaujoire"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel entraîneur a mené le LOSC au titre de Ligue 1 en 2021 ?",
+    "options": [
+      "Christophe Galtier",
+      "Rudi Garcia",
+      "René Girard",
+      "Marcelo Bielsa"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel célèbre attaquant belge a joué pour le LOSC entre 2005 et 2009 ?",
+    "options": [
+      "Eden Hazard",
+      "Romelu Lukaku",
+      "Dries Mertens",
+      "Kevin De Bruyne"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel club est le principal rival historique du LOSC ?",
+    "options": [
+      "RC Lens",
+      "Paris Saint-Germain",
+      "AS Monaco",
+      "Olympique de Marseille"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel chanteur est surnommé le \"taulier\" de la chanson française ?",
+    "options": [
+      "Johnny Hallyday",
+      "Michel Sardou",
+      "Francis Cabrel",
+      "Patrick Bruel"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel artiste a interprété la chanson 'Je te promets' ?",
+    "options": ["Johnny Hallyday", "Indochine", "Téléphone", "Noir Désir"],
+    "answer": 0
+  },
+  {
+    "question": "Qui a chanté 'La Bohème' ?",
+    "options": [
+      "Charles Aznavour",
+      "Jacques Brel",
+      "Serge Gainsbourg",
+      "Georges Brassens"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel chanteur est le leader du groupe Indochine ?",
+    "options": [
+      "Nicola Sirkis",
+      "Jean-Louis Aubert",
+      "Manu Chao",
+      "Benoît Poher"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qui a remporté l'Eurovision pour la France en 1977 avec 'L'oiseau et l'enfant' ?",
+    "options": [
+      "Marie Myriam",
+      "France Gall",
+      "Patricia Kaas",
+      "Mireille Mathieu"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel artiste francophone a interprété la chanson 'Formidable' ?",
+    "options": ["Stromae", "Orelsan", "Julien Doré", "Kendji Girac"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle chanteuse française a interprété la chanson 'Djadja' ?",
+    "options": ["Aya Nakamura", "Angèle", "Amel Bent", "Lous and the Yakuza"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle chanteuse française a popularisé le titre 'Je veux' en 2010 ?",
+    "options": ["Zaz", "Cœur de Pirate", "Clara Luciani", "Camélia Jordana"],
+    "answer": 0
+  },
+  {
+    "question": "Quel artiste français a chanté 'La Corrida' ?",
+    "options": [
+      "Francis Cabrel",
+      "Renaud",
+      "Jean-Jacques Goldman",
+      "Bernard Lavilliers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qui a composé 'Ne me quitte pas' ?",
+    "options": [
+      "Jacques Brel",
+      "Serge Gainsbourg",
+      "Charles Aznavour",
+      "Alain Bashung"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom du président du LOSC à l’époque du titre de 2021 ?",
+    "options": [
+      "Olivier Létang",
+      "Gérard Lopez",
+      "Jean-Michel Aulas",
+      "Nasser Al-Khelaïfi"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "En quelle année le LOSC a-t-il été fondé ?",
+    "options": ["1944", "1933", "1950", "1927"],
+    "answer": 0
+  },
+  {
+    "question": "Quel trophée national le LOSC a-t-il remporté en plus de la Ligue 1 en 2011 ?",
+    "options": [
+      "La Coupe de France",
+      "La Coupe de la Ligue",
+      "Le Trophée des Champions",
+      "La Ligue Europa"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel joueur formé au LOSC a ensuite brillé à Chelsea ?",
+    "options": [
+      "Eden Hazard",
+      "N'Golo Kanté",
+      "Antoine Griezmann",
+      "Riyad Mahrez"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom du hibou de Harry Potter ?",
+    "options": ["Hedwige", "Croûtard", "Pattenrond", "Buck"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom complet de Dumbledore ?",
+    "options": [
+      "Albus Perceval Wulfric Brian Dumbledore",
+      "Albus Gellert Grindelwald Dumbledore",
+      "Albus Sirius James Dumbledore",
+      "Albus Rubeus Severus Dumbledore"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Dans quelle maison est placé Harry Potter ?",
+    "options": ["Gryffondor", "Serpentard", "Serdaigle", "Poufsouffle"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le nom du professeur de potions durant les premières années de Harry à Poudlard ?",
+    "options": [
+      "Severus Rogue",
+      "Horace Slughorn",
+      "Remus Lupin",
+      "Gilderoy Lockhart"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel objet Harry utilise-t-il pour devenir invisible ?",
+    "options": [
+      "Une cape d’invisibilité",
+      "Un sortilège de désillusion",
+      "Un retourneur de temps",
+      "Une bague enchantée"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qui est le parrain de Harry Potter ?",
+    "options": ["Sirius Black", "Rubeus Hagrid", "James Potter", "Remus Lupin"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle créature garde la chambre des secrets ?",
+    "options": ["Un Basilic", "Un Dragon", "Un Détraqueur", "Un Sombral"],
+    "answer": 0
+  },
+  {
+    "question": "Quel sort est utilisé pour repousser un Détraqueur ?",
+    "options": ["Expecto Patronum", "Expelliarmus", "Avada Kedavra", "Lumos"],
+    "answer": 0
+  },
+  {
+    "question": "Comment s’appelle la banque des sorciers à Londres ?",
+    "options": [
+      "Gringotts",
+      "Flourish & Blotts",
+      "Ollivander",
+      "Leaky Cauldron"
+    ],
+    "answer": 0
+  },
+  {
     "question": "Quel océan borde la côte est des États‑Unis ?",
     "options": [
       "Océan Pacifique",
