@@ -3,32 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quizz</title>
+    <meta
+      name="description"
+      content="Quiz interactif avec questions de culture générale"
+    />
+    <title>Quiz</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/2cd317b115.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2cd317b115.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <p class="error-message"></p>
     <div class="container">
       <header>
-        <h1 class="title">Quizz Culture General</h1>
+        <h1 class="title">Quiz Culture Générale</h1>
         <p class="subtitle">Testez vos connaissances en culture générale</p>
       </header>
       <main>
         <section class="quiz">
           <div class="quiz-info">
-            <div class="question-nb"><i class="fa-regular fa-circle-question"></i> Question <span>1</span>/10</div>
-            <div class="current-score"><i class="fa-solid fa-trophy"></i> Score: <span>0</span></div>
+            <div class="question-nb">
+              <i class="fa-solid fa-question"></i> Question <span>1</span>/10
+            </div>
+            <div class="current-score">
+              <i class="fa-solid fa-trophy"></i> Score: <span>0</span>
+            </div>
           </div>
           <p class="question">
             Quel joueur a remporté le plus de Ballons d'Or ?
           </p>
           <div class="answers">
-            <button class="answer"><i class="fa-solid fa-circle-check"></i> Lionel Messi</button>
+            <button class="answer">Lionel Messi</button>
             <button class="answer">Cristiano Ronaldo</button>
             <button class="answer">Michel Platini</button>
             <button class="answer">Johan Cruyff</button>

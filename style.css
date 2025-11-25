@@ -6,12 +6,7 @@
 }
 
 body {
-  background-image: linear-gradient(
-    to right bottom,
-    #E9D5FF,
-    #D8B4FE,
-    #A5B4FC
-  );
+  background-image: linear-gradient(to right bottom, #e9d5ff, #d8b4fe, #a5b4fc);
   height: 100dvh;
   display: flex;
   justify-content: center;
@@ -26,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0.7);
   border-radius: 25px;
   gap: 1rem;
@@ -57,14 +52,13 @@ header {
 .title {
   margin-bottom: 0.5rem;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: #8B5CF6;
+  color: #8b5cf6;
 }
 
 .subtitle {
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: 400;
-  color: #111827;
+  color: #4a4a4a;
 }
 
 main {
@@ -79,64 +73,29 @@ main {
   width: 100%;
 }
 
-.result {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.result h1 {
-  color: #8B5CF6;
-}
-
-.result > * {
-  font-size: clamp(3rem, 10vw, 6rem);
-}
-
-.replay {
-  display: flex;
-  width: fit-content;
-  background-color: rgba(139, 92, 246, 1);
-  border-radius: 15px;
-  padding: 1rem 2.5rem;
-  color: white;
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  border: none;
-}
-
-.replay:hover {
-  background: rgba(178, 81, 188, 1);
-  border: 2px solid white;
-  transform: translateY(-3px);
-}
-
 .quiz-info {
   display: flex;
   justify-content: space-between;
-  background: #F3E8FF;
+  background: #f3e8ff;
   border-radius: 15px;
   padding: 0.8rem 1.2rem;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   width: 100%;
   font-weight: 500;
-  color: #111827;
+  color: #4a4a4a;
 }
 
 .quiz-info i {
-  color: #8B5CF6;
+  color: #8b5cf6;
+  margin-right: 0.25rem;
 }
 
 .question {
-  background-color: #8B5CF6;
+  background-color: #8b5cf6;
   border-radius: 15px;
   padding: 1rem;
   font-size: clamp(1rem, 3vw, 1.25rem);
   width: 100%;
-  transition: all 0.3s ease;
   word-wrap: break-word;
 }
 
@@ -148,11 +107,11 @@ main {
 }
 
 .answer {
-  border: 2px solid rgba(17, 24, 39, 0.7);
-  background: #F9F9FA;
+  border: 2px solid #f3f4f6;
+  background-color: #f3f4f6;
   border-radius: 15px;
   padding: 1rem;
-  color: #111827;
+  color: #4a4a4a;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -160,21 +119,26 @@ main {
 }
 
 .answer:hover {
-  background: #8B5CF6;
-  color: #FFFFFF;
+  background: #f3e8ff;
+  color: #4a4a4a;
+  border: 2px solid #8b5cf6;
   transform: translateY(-3px);
 }
 
+.answer .fa-circle {
+  color: #8b5cf6;
+}
+
 .answer.correct {
-  background-color: #BBF7D0;
-  border: 2px solid #22C55E;
-  color: #111827;
+  background-color: #bbf7d0;
+  border: 2px solid #22c55e;
+  color: #4a4a4a;
 }
 
 .answer.wrong {
-  background-color: #FECACA;
-  border: 2px solid #EF4444;
-  color: #111827;
+  background-color: #fecaca;
+  border: 2px solid #ef4444;
+  color: #4a4a4a;
 }
 
 .answer i {
@@ -182,11 +146,11 @@ main {
 }
 
 .answer .fa-circle-check {
-  color: #22C55E;
+  color: #22c55e;
 }
 
 .answer .fa-circle-xmark {
-  color: #EF4444;
+  color: #ef4444;
 }
 
 .feedback-message {
@@ -201,15 +165,15 @@ main {
 }
 .feedback-message.correct {
   display: block;
-  background-color: #BBF7D0;
-border: 2px solid #22C55E;
-color: #111827;
+  background-color: #bbf7d0;
+  border: 2px solid #22c55e;
+  color: #4a4a4a;
 }
 .feedback-message.wrong {
   display: block;
-  background-color: #FECACA;
-border: 2px solid #EF4444;
-color: #111827;
+  background-color: #fecaca;
+  border: 2px solid #ef4444;
+  color: #4a4a4a;
 }
 
 .next-question-btn {
@@ -234,9 +198,39 @@ color: #111827;
   transform: translateY(-3px);
 }
 
+.result {
+  display: none;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.result > * {
+  font-size: clamp(3rem, 10vw, 6rem);
+}
+
+.result h1 {
+  color: #8b5cf6;
+}
+
 .score {
-  color: #111827;
-  font-weight: 0;
+  color: #4a4a4a;
+}
+
+.replay {
+  background-color: rgba(139, 92, 246, 1);
+  border-radius: 15px;
+  padding: 1rem 2.5rem;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: none;
+}
+
+.replay:hover {
+  transform: translateY(-3px);
+  transform: scale(1.25);
 }
 
 @media (max-width: 768px) {

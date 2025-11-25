@@ -1,13 +1,14 @@
 const questionEl = document.querySelector(".question");
 const errorMessage = document.querySelector(".error-message");
-const answerBtnsEl = document.querySelectorAll(".answer");
-const nextquestionBtnEl = document.querySelector(".next-question-btn");
+const answerBtns = document.querySelectorAll(".answer");
+const nextQuestionBtn = document.querySelector(".next-question-btn");
 const questionNbEl = document.querySelector(".question-nb span");
 const currentScoreEl = document.querySelector(".current-score span");
 const feedbackMessageEl = document.querySelector(".feedback-message");
 const quizSectionEl = document.querySelector(".quiz");
 const resultSectionEl = document.querySelector(".result");
 const scoreEl = document.querySelector(".score");
+
 let questions = [];
 let currentIndex = 0;
 let currentQuestion = null;
@@ -15,64 +16,61 @@ let currentScore = 0;
 
 loadQuestions();
 
-answerBtnsEl.forEach((btn, i) =>
+answerBtns.forEach((btn, i) =>
   btn.addEventListener("click", function () {
     checkAnswer(btn, i);
   })
 );
 
-nextquestionBtnEl.addEventListener("click", function () {
-  answerBtnsEl.forEach((btn) => {
+nextQuestionBtn.addEventListener("click", function () {
+  answerBtns.forEach((btn) => {
     btn.disabled = false;
     btn.classList.remove("correct");
     btn.classList.remove("wrong");
     feedbackMessageEl.classList.remove("wrong");
     feedbackMessageEl.classList.remove("correct");
   });
-  nextquestionBtnEl.classList.remove("active");
+  nextQuestionBtn.classList.remove("active");
 
   if (currentIndex === 9) {
     scoreEl.textContent = currentScore;
     quizSectionEl.style.display = "none";
-    resultSectionEl.style.display = "flex";
+    resultSectionEl.style.display = "grid";
   } else {
     currentIndex++;
     showQuestion();
   }
 });
 
-function checkAnswer(selectAnswer, selectAnswerIndex) {
-  answerBtnsEl.forEach((btn) => {
+function checkAnswer(selectedAnswerElement, selectAnswerIndex) {
+  answerBtns.forEach((btn) => {
     btn.disabled = true;
   });
 
   if (selectAnswerIndex === currentQuestion.answer) {
-    selectAnswer.firstChild.classList.remove("fa-regular", "fa-circle");
-    selectAnswer.firstChild.classList.add("fa-solid", "fa-circle-check", "fa-xl");
-    answerBtnsEl[selectAnswerIndex].classList.add("correct");
+    updateAnswerIcon(selectedAnswerElement, "correct");
+    answerBtns[selectAnswerIndex].classList.add("correct");
     feedbackMessageEl.classList.add("correct");
     feedbackMessageEl.textContent = "Bonne réponse";
     currentScore++;
     currentScoreEl.textContent = currentScore;
   } else {
-    selectAnswer.firstChild.classList.remove("fa-regular", "fa-circle");
-    selectAnswer.firstChild.classList.add("fa-solid", "fa-circle-xmark", "fa-xl");
-    answerBtnsEl[selectAnswerIndex].classList.add("wrong");
-    answerBtnsEl[currentQuestion.answer].classList.add("correct");
-    answerBtnsEl[currentQuestion.answer].firstChild.classList.remove("fa-regular", "fa-circle");
-answerBtnsEl[currentQuestion.answer].firstChild.classList.add("fa-solid", "fa-circle-check", "fa-xl");
+    updateAnswerIcon(selectedAnswerElement, "wrong");
+    answerBtns[selectAnswerIndex].classList.add("wrong");
+    answerBtns[currentQuestion.answer].classList.add("correct");
     feedbackMessageEl.classList.add("wrong");
     feedbackMessageEl.textContent = "Mauvaise réponse";
+    updateAnswerIcon(answerBtns[currentQuestion.answer], "correct");
   }
 
   if (currentIndex === 9) {
-    nextquestionBtnEl.textContent = "Afficher le score";
+    nextQuestionBtn.textContent = "Afficher le score";
   }
-  nextquestionBtnEl.classList.add("active");
+  nextQuestionBtn.classList.add("active");
 }
 
 function pickRandomItems(array, count) {
-  const shuffled = array;
+  const shuffled = [...array];
   for (let index = shuffled.length - 1; index > 0; index--) {
     const randIndex = Math.floor(Math.random() * (index + 1));
     [shuffled[index], shuffled[randIndex]] = [
@@ -87,7 +85,7 @@ function pickRandomItems(array, count) {
 function showQuestion() {
   currentQuestion = questions[currentIndex];
   questionEl.textContent = currentQuestion.question;
-  const arrayBtn = Array.from(answerBtnsEl);
+  const arrayBtn = Array.from(answerBtns);
   arrayBtn.forEach((btn, i) => {
     const icon = document.createElement("i");
     icon.classList.add("fa-regular", "fa-circle", "fa-xl");
@@ -128,10 +126,29 @@ function restartQuiz() {
 
   quizSectionEl.style.display = "flex";
   resultSectionEl.style.display = "none";
-  nextquestionBtnEl.textContent = "Suivant";
+  nextQuestionBtn.textContent = "Suivant";
   questionNbEl.textContent = currentIndex;
   currentScoreEl.textContent = currentScore;
 
   // Recharge de nouvelles questions aléatoires
   loadQuestions();
+}
+
+function updateAnswerIcon(answerElement, iconType) {
+  const icon = answerElement.firstChild;
+  icon.classList.remove(
+    "fa-regular",
+    "fa-circle",
+    "fa-solid",
+    "fa-circle-check",
+    "fa-circle-xmark"
+  );
+
+  if (iconType === "correct") {
+    icon.classList.add("fa-solid", "fa-circle-check", "fa-xl");
+  } else if (iconType === "wrong") {
+    icon.classList.add("fa-solid", "fa-circle-xmark", "fa-xl");
+  } else {
+    icon.classList.add("fa-regular", "fa-circle", "fa-xl");
+  }
 }
