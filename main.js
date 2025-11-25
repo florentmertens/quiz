@@ -17,7 +17,7 @@ loadQuestions();
 
 answerBtnsEl.forEach((btn, i) =>
   btn.addEventListener("click", function () {
-    checkAnswer(i);
+    checkAnswer(btn, i);
   })
 );
 
@@ -41,20 +41,26 @@ nextquestionBtnEl.addEventListener("click", function () {
   }
 });
 
-function checkAnswer(selectAnswer) {
+function checkAnswer(selectAnswer, selectAnswerIndex) {
   answerBtnsEl.forEach((btn) => {
     btn.disabled = true;
   });
 
-  if (selectAnswer === currentQuestion.answer) {
-    answerBtnsEl[selectAnswer].classList.add("correct");
+  if (selectAnswerIndex === currentQuestion.answer) {
+    selectAnswer.firstChild.classList.remove("fa-regular", "fa-circle");
+    selectAnswer.firstChild.classList.add("fa-solid", "fa-circle-check", "fa-xl");
+    answerBtnsEl[selectAnswerIndex].classList.add("correct");
     feedbackMessageEl.classList.add("correct");
     feedbackMessageEl.textContent = "Bonne réponse";
     currentScore++;
     currentScoreEl.textContent = currentScore;
   } else {
-    answerBtnsEl[selectAnswer].classList.add("wrong");
+    selectAnswer.firstChild.classList.remove("fa-regular", "fa-circle");
+    selectAnswer.firstChild.classList.add("fa-solid", "fa-circle-xmark", "fa-xl");
+    answerBtnsEl[selectAnswerIndex].classList.add("wrong");
     answerBtnsEl[currentQuestion.answer].classList.add("correct");
+    answerBtnsEl[currentQuestion.answer].firstChild.classList.remove("fa-regular", "fa-circle");
+answerBtnsEl[currentQuestion.answer].firstChild.classList.add("fa-solid", "fa-circle-check", "fa-xl");
     feedbackMessageEl.classList.add("wrong");
     feedbackMessageEl.textContent = "Mauvaise réponse";
   }
@@ -83,7 +89,10 @@ function showQuestion() {
   questionEl.textContent = currentQuestion.question;
   const arrayBtn = Array.from(answerBtnsEl);
   arrayBtn.forEach((btn, i) => {
+    const icon = document.createElement("i");
+    icon.classList.add("fa-regular", "fa-circle", "fa-xl");
     btn.textContent = currentQuestion.options[i];
+    btn.prepend(icon);
   });
   questionNbEl.textContent = currentIndex + 1;
 }
