@@ -25,11 +25,27 @@
         <h1 class="title">Quiz Culture Générale</h1>
         <p class="subtitle">Testez vos connaissances en culture générale</p>
       </header>
+      <section class="start">
+        <form class="name-form">
+          <input
+            type="text"
+            id="playerName"
+            class="name-input"
+            placeholder="Entrez votre prénom"
+            required
+          />
+        </form>
+        <button class="start-quiz-btn" type="button">Commencer le Quiz</button>
+      </section>
       <main>
         <section class="quiz">
           <div class="quiz-info">
             <div class="question-nb">
               <i class="fa-solid fa-question"></i> Question <span>1</span>/10
+            </div>
+            <div class="timer-container">
+              <i class="fa-solid fa-hourglass"></i
+              ><span id="timer" class="timer">00:00</span>
             </div>
             <div class="current-score">
               <i class="fa-solid fa-trophy"></i> Score: <span>0</span>
@@ -54,6 +70,6 @@
         </section>
       </main>
     </div>
-    <script src="main.js"></script>
   </body>
+  <script src="main.js"></script>
 </html>

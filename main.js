@@ -8,13 +8,32 @@ const feedbackMessageEl = document.querySelector(".feedback-message");
 const quizSectionEl = document.querySelector(".quiz");
 const resultSectionEl = document.querySelector(".result");
 const scoreEl = document.querySelector(".score");
+const timerEl = document.getElementById("timer");
+const startBtn = document.querySelector(".start-quiz-btn");
+const nameInput = document.getElementById("playerName");
+const startSection = document.querySelector(".start");
+const mainSection = document.querySelector("main");
 
 let questions = [];
 let currentIndex = 0;
 let currentQuestion = null;
 let currentScore = 0;
+let playerName = "";
+let startTime = null;
+let timerInterval = null;
+let totalTime = 0;
 
-loadQuestions();
+startBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  playerName = nameInput.value.trim();
+  if (playerName) {
+    startSection.style.display = "none";
+    mainSection.style.display = "flex";
+    startTime = Date.now();
+    updateTimer();
+    loadQuestions();
+  }
+});
 
 answerBtns.forEach((btn, i) =>
   btn.addEventListener("click", function () {
@@ -33,7 +52,12 @@ nextQuestionBtn.addEventListener("click", function () {
   nextQuestionBtn.classList.remove("active");
 
   if (currentIndex === 9) {
-    scoreEl.textContent = currentScore;
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+    totalTime = Math.floor((Date.now() - startTime) / 1000);
+    scoreEl.textContent = `${currentScore}/10 (${totalTime}s)`;
     quizSectionEl.style.display = "none";
     resultSectionEl.style.display = "grid";
   } else {
@@ -41,6 +65,17 @@ nextQuestionBtn.addEventListener("click", function () {
     showQuestion();
   }
 });
+
+function updateTimer() {
+  timerInterval = setInterval(() => {
+    if (startTime) {
+      const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+      const min = String(Math.floor(elapsedTime / 60)).padStart(2, "0");
+      const sec = String(elapsedTime % 60).padStart(2, "0");
+      timerEl.textContent = `${min}:${sec}`;
+    }
+  }, 500);
+}
 
 function checkAnswer(selectedAnswerElement, selectAnswerIndex) {
   answerBtns.forEach((btn) => {
@@ -124,13 +159,21 @@ function restartQuiz() {
   currentQuestion = null;
   currentScore = 0;
 
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+
+  startTime = null;
+  totalTime = 0;
+  timerEl.textContent = "00:00";
+
   quizSectionEl.style.display = "flex";
   resultSectionEl.style.display = "none";
   nextQuestionBtn.textContent = "Suivant";
   questionNbEl.textContent = currentIndex;
   currentScoreEl.textContent = currentScore;
 
-  // Recharge de nouvelles questions aléatoires
   loadQuestions();
 }
 
