@@ -8,7 +8,8 @@ const feedbackMessageEl = document.querySelector(".feedback-message");
 const quizSectionEl = document.querySelector(".quiz");
 const resultSectionEl = document.querySelector(".result");
 const scoreEl = document.querySelector(".score");
-const timerEl = document.getElementById("timer");
+const timeEl = document.querySelector(".time");
+const currentTimerEl = document.getElementById("timer");
 const startBtn = document.querySelector(".start-quiz-btn");
 const nameInput = document.getElementById("playerName");
 const startSection = document.querySelector(".start");
@@ -28,7 +29,7 @@ startBtn.addEventListener("click", function (e) {
   playerName = nameInput.value.trim();
   if (playerName) {
     startSection.style.display = "none";
-    mainSection.style.display = "flex";
+    quizSectionEl.style.display = "flex";
     startTime = Date.now();
     updateTimer();
     loadQuestions();
@@ -57,7 +58,8 @@ nextQuestionBtn.addEventListener("click", function () {
       timerInterval = null;
     }
     totalTime = Math.floor((Date.now() - startTime) / 1000);
-    scoreEl.textContent = `${currentScore}/10 (${totalTime}s)`;
+    scoreEl.textContent = `${currentScore}/10`;
+    timeEl.textContent = `${totalTime}s`;
     quizSectionEl.style.display = "none";
     resultSectionEl.style.display = "grid";
   } else {
@@ -72,7 +74,7 @@ function updateTimer() {
       const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
       const min = String(Math.floor(elapsedTime / 60)).padStart(2, "0");
       const sec = String(elapsedTime % 60).padStart(2, "0");
-      timerEl.textContent = `${min}:${sec}`;
+      currentTimerEl.textContent = `${min}:${sec}`;
     }
   }, 500);
 }
@@ -164,9 +166,9 @@ function restartQuiz() {
     timerInterval = null;
   }
 
-  startTime = null;
+  startTime = Date.now();
   totalTime = 0;
-  timerEl.textContent = "00:00";
+  currentTimerEl.textContent = "00:00";
 
   quizSectionEl.style.display = "flex";
   resultSectionEl.style.display = "none";
@@ -174,6 +176,7 @@ function restartQuiz() {
   questionNbEl.textContent = currentIndex;
   currentScoreEl.textContent = currentScore;
 
+  updateTimer();
   loadQuestions();
 }
 

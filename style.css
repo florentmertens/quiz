@@ -61,6 +61,13 @@ header {
   color: #4a4a4a;
 }
 
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .name-form {
   margin-bottom: 1.25rem;
 }
@@ -90,11 +97,11 @@ header {
 
 main {
   width: 100%;
-  display: none;
+  display: flex;
 }
 
 .quiz {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
@@ -250,17 +257,18 @@ main {
   display: none;
   grid-template-rows: 1fr 1fr 1fr;
   place-items: center;
+  width: 100%;
 }
 
 .result > * {
   font-size: clamp(3rem, 10vw, 6rem);
 }
 
-.result h1 {
+.result h3 {
   color: #8b5cf6;
 }
 
-.score {
+.score, .time {
   color: #4a4a4a;
 }
 

@@ -25,19 +25,19 @@
         <h1 class="title">Quiz Culture Générale</h1>
         <p class="subtitle">Testez vos connaissances en culture générale</p>
       </header>
-      <section class="start">
-        <form class="name-form">
-          <input
-            type="text"
-            id="playerName"
-            class="name-input"
-            placeholder="Entrez votre prénom"
-            required
-          />
-        </form>
-        <button class="start-quiz-btn" type="button">Commencer le Quiz</button>
-      </section>
       <main>
+        <section class="start">
+          <form class="name-form">
+            <input
+              type="text"
+              id="playerName"
+              class="name-input"
+              placeholder="Entrez votre prénom"
+              required
+            />
+          </form>
+          <button class="start-quiz-btn" type="button">Commencer le Quiz</button>
+        </section>
         <section class="quiz">
           <div class="quiz-info">
             <div class="question-nb">
@@ -64,8 +64,14 @@
           <button class="next-question-btn">Suivant</button>
         </section>
         <section class="result">
-          <h1>Score</h1>
-          <p class="score">0</p>
+          <div>
+            <h3>Score</h3>
+            <p class="score"></p>
+          </div>
+          <div>
+            <h3>Temps</h3>
+            <p class="time"></p>
+          </div>
           <button onclick="restartQuiz()" class="replay">Rejouer</button>
         </section>
       </main>
