@@ -255,7 +255,7 @@ main {
 
 .result {
   display: none;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto;
   place-items: center;
   width: 100%;
 }
@@ -264,15 +264,21 @@ main {
   font-size: clamp(3rem, 10vw, 6rem);
 }
 
+.result h3,
+.result p {
+  line-height: 1.3;
+}
+
 .result h3 {
   color: #8b5cf6;
 }
 
-.score, .time {
+.score,
+.time {
   color: #4a4a4a;
 }
 
-.replay {
+.restart-btn {
   background-color: rgba(139, 92, 246, 1);
   border-radius: 15px;
   padding: 1rem 2.5rem;
@@ -282,11 +288,17 @@ main {
   transition: all 0.3s ease;
   text-transform: uppercase;
   border: none;
+  margin-top: 1rem;
 }
 
-.replay:hover {
+.restart-btn:hover {
   transform: translateY(-3px);
   transform: scale(1.25);
+}
+
+.question-nb span::before,
+.current-score span::before {
+  content: "\00A0";
 }
 
 @media (max-width: 768px) {

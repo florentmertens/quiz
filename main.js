@@ -1,200 +1,282 @@
-const questionEl = document.querySelector(".question");
-const errorMessage = document.querySelector(".error-message");
-const answerBtns = document.querySelectorAll(".answer");
-const nextQuestionBtn = document.querySelector(".next-question-btn");
-const questionNbEl = document.querySelector(".question-nb span");
-const currentScoreEl = document.querySelector(".current-score span");
-const feedbackMessageEl = document.querySelector(".feedback-message");
-const quizSectionEl = document.querySelector(".quiz");
-const resultSectionEl = document.querySelector(".result");
-const scoreEl = document.querySelector(".score");
-const timeEl = document.querySelector(".time");
-const currentTimerEl = document.getElementById("timer");
-const startBtn = document.querySelector(".start-quiz-btn");
-const nameInput = document.getElementById("playerName");
-const startSection = document.querySelector(".start");
-const mainSection = document.querySelector("main");
+const CONFIG = {
+  MAX_QUESTIONS: 10,
+  TIMER_UPDATE_INTERVAL: 500,
+  MIN_NAME_LENGTH: 3,
+  QUESTIONS_FILE: "questions.json",
+  SUPPORT_EMAIL: "mertens.florent00@gmail.com",
+};
 
-let questions = [];
-let currentIndex = 0;
-let currentQuestion = null;
-let currentScore = 0;
-let playerName = "";
-let startTime = null;
-let timerInterval = null;
-let totalTime = 0;
+const MESSAGES = {
+  CORRECT_ANSWER: "Bonne réponse",
+  WRONG_ANSWER: "Mauvaise réponse",
+  SHOW_SCORE: "Afficher le score",
+  NEXT: "Suivant",
+  INVALID_NAME: `Veuillez entrer un nom valide (minimum ${CONFIG.MIN_NAME_LENGTH} caractères)`,
+  NO_QUESTIONS: `Erreur : Pas de questions disponible, merci de contacter le support technique à l'adresse ${CONFIG.SUPPORT_EMAIL}.`,
+  LOAD_ERROR: `Erreur : Chargement des questions échoué, merci de rafraîchir la page ou de contacter le support technique à l'adresse ${CONFIG.SUPPORT_EMAIL}.`,
+};
 
-startBtn.addEventListener("click", function (e) {
+const state = {
+  questions: [],
+  currentIndex: 0,
+  currentQuestion: null,
+  currentScore: 0,
+  playerName: "",
+  startTime: null,
+  timerInterval: null,
+  totalTime: 0,
+};
+
+const elements = {
+  questionEl: document.querySelector(".question"),
+  answerBtns: document.querySelectorAll(".answer"),
+  nextQuestionBtn: document.querySelector(".next-question-btn"),
+
+  questionNbEl: document.querySelector(".question-nb span"),
+  currentScoreEl: document.querySelector(".current-score span"),
+  currentTimerEl: document.getElementById("timer"),
+
+  errorMessage: document.querySelector(".error-message"),
+  feedbackMessageEl: document.querySelector(".feedback-message"),
+
+  startSection: document.querySelector(".start"),
+  quizSectionEl: document.querySelector(".quiz"),
+  resultSectionEl: document.querySelector(".result"),
+
+  scoreEl: document.querySelector(".score"),
+  timeEl: document.querySelector(".time"),
+
+  startBtn: document.querySelector(".start-quiz-btn"),
+  nameInput: document.getElementById("playerName"),
+  restartBtn: document.querySelector(".restart-btn"),
+};
+
+elements.startBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  playerName = nameInput.value.trim();
-  if (playerName) {
-    startSection.style.display = "none";
-    quizSectionEl.style.display = "flex";
-    startTime = Date.now();
-    updateTimer();
-    loadQuestions();
-  }
+  startQuiz();
 });
 
-answerBtns.forEach((btn, i) =>
-  btn.addEventListener("click", function () {
-    checkAnswer(btn, i);
-  })
-);
-
-nextQuestionBtn.addEventListener("click", function () {
-  answerBtns.forEach((btn) => {
-    btn.disabled = false;
-    btn.classList.remove("correct");
-    btn.classList.remove("wrong");
-    feedbackMessageEl.classList.remove("wrong");
-    feedbackMessageEl.classList.remove("correct");
+elements.answerBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    checkAnswer(btn, index);
   });
-  nextQuestionBtn.classList.remove("active");
-
-  if (currentIndex === 9) {
-    if (timerInterval) {
-      clearInterval(timerInterval);
-      timerInterval = null;
-    }
-    totalTime = Math.floor((Date.now() - startTime) / 1000);
-    scoreEl.textContent = `${currentScore}/10`;
-    timeEl.textContent = `${totalTime}s`;
-    quizSectionEl.style.display = "none";
-    resultSectionEl.style.display = "grid";
-  } else {
-    currentIndex++;
-    showQuestion();
-  }
 });
 
-function updateTimer() {
-  timerInterval = setInterval(() => {
-    if (startTime) {
-      const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
-      const min = String(Math.floor(elapsedTime / 60)).padStart(2, "0");
-      const sec = String(elapsedTime % 60).padStart(2, "0");
-      currentTimerEl.textContent = `${min}:${sec}`;
-    }
-  }, 500);
+elements.nextQuestionBtn.addEventListener("click", nextQuestion);
+
+if (elements.restartBtn) {
+  elements.restartBtn.addEventListener("click", restartQuiz);
 }
 
-function checkAnswer(selectedAnswerElement, selectAnswerIndex) {
-  answerBtns.forEach((btn) => {
-    btn.disabled = true;
-  });
+elements.nameInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    startQuiz();
+  }
+});
 
-  if (selectAnswerIndex === currentQuestion.answer) {
-    updateAnswerIcon(selectedAnswerElement, "correct");
-    answerBtns[selectAnswerIndex].classList.add("correct");
-    feedbackMessageEl.classList.add("correct");
-    feedbackMessageEl.textContent = "Bonne réponse";
-    currentScore++;
-    currentScoreEl.textContent = currentScore;
-  } else {
-    updateAnswerIcon(selectedAnswerElement, "wrong");
-    answerBtns[selectAnswerIndex].classList.add("wrong");
-    answerBtns[currentQuestion.answer].classList.add("correct");
-    feedbackMessageEl.classList.add("wrong");
-    feedbackMessageEl.textContent = "Mauvaise réponse";
-    updateAnswerIcon(answerBtns[currentQuestion.answer], "correct");
+function startQuiz() {
+  state.playerName = elements.nameInput.value.trim();
+
+  if (!state.playerName || state.playerName.length < CONFIG.MIN_NAME_LENGTH) {
+    alert(MESSAGES.INVALID_NAME);
+    return;
   }
 
-  if (currentIndex === 9) {
-    nextQuestionBtn.textContent = "Afficher le score";
-  }
-  nextQuestionBtn.classList.add("active");
+  elements.startSection.style.display = "none";
+  elements.quizSectionEl.style.display = "flex";
+
+  startTimer();
+  loadQuestions();
 }
 
 function pickRandomItems(array, count) {
   const shuffled = [...array];
-  for (let index = shuffled.length - 1; index > 0; index--) {
-    const randIndex = Math.floor(Math.random() * (index + 1));
-    [shuffled[index], shuffled[randIndex]] = [
-      shuffled[randIndex],
-      shuffled[index],
-    ];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
 
   return shuffled.slice(0, count);
 }
 
-function showQuestion() {
-  currentQuestion = questions[currentIndex];
-  questionEl.textContent = currentQuestion.question;
-  const arrayBtn = Array.from(answerBtns);
-  arrayBtn.forEach((btn, i) => {
-    const icon = document.createElement("i");
-    icon.classList.add("fa-regular", "fa-circle", "fa-xl");
-    btn.textContent = currentQuestion.options[i];
-    btn.prepend(icon);
-  });
-  questionNbEl.textContent = currentIndex + 1;
-}
-
-function showNoQuestionsMessage() {
-  errorMessage.textContent =
-    "Erreur : Pas de questions disponible, merci de contacter le support technique à l'adresse mertens.florent00@gmail.com.";
-  errorMessage.style.display = "flex";
-}
-
 async function loadQuestions() {
   try {
-    const response = await fetch("questions.json");
-    if (!response.ok) throw new Error(response.status);
+    const response = await fetch(CONFIG.QUESTIONS_FILE);
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
     const data = await response.json();
-    const maxQuestions = Math.min(data.length, 10);
-    questions = pickRandomItems(data, maxQuestions);
-    if (questions.length) showQuestion();
-    else showNoQuestionsMessage();
+    const maxQuestions = Math.min(data.length, CONFIG.MAX_QUESTIONS);
+    state.questions = pickRandomItems(data, maxQuestions);
+
+    if (state.questions.length > 0) {
+      showQuestion();
+    } else {
+      showError(MESSAGES.NO_QUESTIONS);
+    }
   } catch (err) {
-    console.error(err);
-    errorMessage.textContent =
-      "Erreur : Chargement des questions échoué, merci de rafraîchir la page ou de contacter le support technique à l'adresse mertens.florent00@gmail.com.";
-    errorMessage.style.display = "flex";
+    console.error("Erreur de chargement:", err);
+    showError(MESSAGES.LOAD_ERROR);
   }
 }
 
-function restartQuiz() {
-  questions = [];
-  currentIndex = 0;
-  currentQuestion = null;
-  currentScore = 0;
+function showError(message) {
+  elements.errorMessage.textContent = message;
+  elements.errorMessage.style.display = "flex";
+}
 
-  if (timerInterval) {
-    clearInterval(timerInterval);
-    timerInterval = null;
+function showQuestion() {
+  state.currentQuestion = state.questions[state.currentIndex];
+
+  elements.questionEl.textContent = state.currentQuestion.question;
+  elements.questionNbEl.textContent = state.currentIndex + 1;
+
+  elements.answerBtns.forEach((btn, i) => {
+    const icon = document.createElement("i");
+    icon.classList.add("fa-regular", "fa-circle", "fa-xl");
+    btn.textContent = state.currentQuestion.options[i];
+    btn.prepend(icon);
+  });
+}
+
+function checkAnswer(selectedBtn, selectedIndex) {
+  const isCorrect = selectedIndex === state.currentQuestion.answer;
+
+  elements.answerBtns.forEach((btn) => {
+    btn.disabled = true;
+  });
+
+  if (isCorrect) {
+    updateAnswerIcon(selectedBtn, "correct");
+    selectedBtn.classList.add("correct");
+    elements.feedbackMessageEl.classList.add("correct");
+    elements.feedbackMessageEl.textContent = MESSAGES.CORRECT_ANSWER;
+
+    state.currentScore++;
+    elements.currentScoreEl.textContent = state.currentScore;
+  } else {
+    updateAnswerIcon(selectedBtn, "wrong");
+    selectedBtn.classList.add("wrong");
+
+    const correctBtn = elements.answerBtns[state.currentQuestion.answer];
+    correctBtn.classList.add("correct");
+    updateAnswerIcon(correctBtn, "correct");
+
+    elements.feedbackMessageEl.classList.add("wrong");
+    elements.feedbackMessageEl.textContent = MESSAGES.WRONG_ANSWER;
   }
 
-  startTime = Date.now();
-  totalTime = 0;
-  currentTimerEl.textContent = "00:00";
+  if (state.currentIndex === CONFIG.MAX_QUESTIONS - 1) {
+    elements.nextQuestionBtn.textContent = MESSAGES.SHOW_SCORE;
+  }
 
-  quizSectionEl.style.display = "flex";
-  resultSectionEl.style.display = "none";
-  nextQuestionBtn.textContent = "Suivant";
-  questionNbEl.textContent = currentIndex;
-  currentScoreEl.textContent = currentScore;
-
-  updateTimer();
-  loadQuestions();
+  elements.nextQuestionBtn.classList.add("active");
 }
 
 function updateAnswerIcon(answerElement, iconType) {
   const icon = answerElement.firstChild;
+
   icon.classList.remove(
     "fa-regular",
     "fa-circle",
     "fa-solid",
     "fa-circle-check",
-    "fa-circle-xmark"
+    "fa-circle-xmark",
   );
 
-  if (iconType === "correct") {
-    icon.classList.add("fa-solid", "fa-circle-check", "fa-xl");
-  } else if (iconType === "wrong") {
-    icon.classList.add("fa-solid", "fa-circle-xmark", "fa-xl");
-  } else {
-    icon.classList.add("fa-regular", "fa-circle", "fa-xl");
+  switch (iconType) {
+    case "correct":
+      icon.classList.add("fa-solid", "fa-circle-check", "fa-xl");
+      break;
+    case "wrong":
+      icon.classList.add("fa-solid", "fa-circle-xmark", "fa-xl");
+      break;
+    default:
+      icon.classList.add("fa-regular", "fa-circle", "fa-xl");
   }
+}
+
+function nextQuestion() {
+  resetAnswersDisplay();
+
+  if (state.currentIndex === CONFIG.MAX_QUESTIONS - 1) {
+    showResults();
+  } else {
+    state.currentIndex++;
+    showQuestion();
+  }
+}
+
+function resetAnswersDisplay() {
+  elements.answerBtns.forEach((btn) => {
+    btn.disabled = false;
+    btn.classList.remove("correct", "wrong");
+    updateAnswerIcon(btn, "default");
+  });
+
+  elements.feedbackMessageEl.classList.remove("correct", "wrong");
+  elements.feedbackMessageEl.textContent = "";
+  elements.nextQuestionBtn.classList.remove("active");
+}
+
+function startTimer() {
+  state.startTime = Date.now();
+  state.timerInterval = setInterval(() => {
+    const elapsedTime = Math.floor((Date.now() - state.startTime) / 1000);
+    elements.currentTimerEl.textContent = formatTime(elapsedTime);
+  }, CONFIG.TIMER_UPDATE_INTERVAL);
+}
+
+function stopTimer() {
+  if (state.timerInterval) {
+    clearInterval(state.timerInterval);
+    state.timerInterval = null;
+  }
+}
+
+function resetTimer() {
+  stopTimer();
+  elements.currentTimerEl.textContent = "00:00";
+}
+
+function formatTime(seconds) {
+  const min = String(Math.floor(seconds / 60)).padStart(2, "0");
+  const sec = String(seconds % 60).padStart(2, "0");
+  return `${min}:${sec}`;
+}
+
+function showResults() {
+  stopTimer();
+
+  state.totalTime = Math.floor((Date.now() - state.startTime) / 1000);
+  state.totalTime = formatTime(state.totalTime);
+
+  elements.scoreEl.textContent = `${state.currentScore}/${CONFIG.MAX_QUESTIONS}`;
+  elements.timeEl.textContent = state.totalTime;
+
+  elements.quizSectionEl.style.display = "none";
+  elements.resultSectionEl.style.display = "grid";
+}
+
+function restartQuiz() {
+  state.questions = [];
+  state.currentIndex = 0;
+  state.currentQuestion = null;
+  state.currentScore = 0;
+  state.totalTime = 0;
+
+  elements.questionNbEl.textContent = 0;
+  elements.currentScoreEl.textContent = 0;
+  elements.nextQuestionBtn.textContent = MESSAGES.NEXT;
+
+  elements.resultSectionEl.style.display = "none";
+  elements.quizSectionEl.style.display = "flex";
+
+  resetTimer();
+  startTimer();
+  loadQuestions();
 }
