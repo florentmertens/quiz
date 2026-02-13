@@ -17,6 +17,8 @@
       src="https://kit.fontawesome.com/2cd317b115.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <p class="error-message"></p>
@@ -65,19 +67,27 @@
           <p class="feedback-message"></p>
           <button class="next-question-btn">Suivant</button>
         </section>
-        <section class="result">
-          <div>
-            <h3>Score</h3>
-            <p class="score"></p>
+        <section class="result-container">
+          <div class="result">
+            <div class="score-container">
+              <h3>Score</h3>
+              <p class="score">10</p>
+            </div>
+            <div class="time-container">
+              <h3>Temps</h3>
+              <p class="time">25</p>
+            </div>
+          </div>
+          <div class="leaderboard-container">
+            <h3>Classement</h3>
+            <ol id="leaderboardList">
+            </ol>
           </div>
           <div>
-            <h3>Temps</h3>
-            <p class="time"></p>
+            <button class="restart-btn">Rejouer</button>
           </div>
-          <button class="restart-btn">Rejouer</button>
         </section>
       </main>
     </div>
   </body>
-  <script src="main.js"></script>
 </html>

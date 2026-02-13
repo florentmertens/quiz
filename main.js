@@ -2,18 +2,28 @@ const CONFIG = {
   MAX_QUESTIONS: 10,
   TIMER_UPDATE_INTERVAL: 500,
   MIN_NAME_LENGTH: 3,
+  MAX_NAME_LENGTH: 20,
   QUESTIONS_FILE: "questions.json",
   SUPPORT_EMAIL: "mertens.florent00@gmail.com",
 };
+
+const SUPABASE_CONFIG = {
+  URL: "https://bkpcqdnfxilexgwhnokm.supabase.co",
+  KEY: "sb_publishable_7bwobBrio2klbwkyfLtgiw_C0eUWVO1",
+  TABLE: "ranking",
+  TOP_LIMIT: 20,
+};
+
 
 const MESSAGES = {
   CORRECT_ANSWER: "Bonne réponse",
   WRONG_ANSWER: "Mauvaise réponse",
   SHOW_SCORE: "Afficher le score",
   NEXT: "Suivant",
-  INVALID_NAME: `Veuillez entrer un nom valide (minimum ${CONFIG.MIN_NAME_LENGTH} caractères)`,
+  INVALID_NAME: `Veuillez entrer un nom valide (minimum ${CONFIG.MIN_NAME_LENGTH} caractères maximum ${CONFIG.MAX_NAME_LENGTH} caractères)`,
   NO_QUESTIONS: `Erreur : Pas de questions disponible, merci de contacter le support technique à l'adresse ${CONFIG.SUPPORT_EMAIL}.`,
   LOAD_ERROR: `Erreur : Chargement des questions échoué, merci de rafraîchir la page ou de contacter le support technique à l'adresse ${CONFIG.SUPPORT_EMAIL}.`,
+  LEADERBOARD_ERROR : `Erreur : Le chargement du classement à échoué, merci de contacter le support technique à l'adresse ${CONFIG.SUPPORT_EMAIL}.`
 };
 
 const state = {
@@ -41,7 +51,7 @@ const elements = {
 
   startSection: document.querySelector(".start"),
   quizSectionEl: document.querySelector(".quiz"),
-  resultSectionEl: document.querySelector(".result"),
+  resultSectionEl: document.querySelector(".result-container"),
 
   scoreEl: document.querySelector(".score"),
   timeEl: document.querySelector(".time"),
@@ -78,7 +88,7 @@ elements.nameInput.addEventListener("keypress", (e) => {
 function startQuiz() {
   state.playerName = elements.nameInput.value.trim();
 
-  if (!state.playerName || state.playerName.length < CONFIG.MIN_NAME_LENGTH) {
+  if (!state.playerName || state.playerName.length < CONFIG.MIN_NAME_LENGTH || state.playerName.length > CONFIG.MAX_NAME_LENGTH) {
     alert(MESSAGES.INVALID_NAME);
     return;
   }
@@ -249,17 +259,25 @@ function formatTime(seconds) {
   return `${min}:${sec}`;
 }
 
-function showResults() {
+async function showResults() {
   stopTimer();
 
   state.totalTime = Math.floor((Date.now() - state.startTime) / 1000);
-  state.totalTime = formatTime(state.totalTime);
 
   elements.scoreEl.textContent = `${state.currentScore}/${CONFIG.MAX_QUESTIONS}`;
-  elements.timeEl.textContent = state.totalTime;
+  elements.timeEl.textContent = formatTime(state.totalTime);;
 
   elements.quizSectionEl.style.display = "none";
   elements.resultSectionEl.style.display = "grid";
+  
+  try {
+    await addScore({ name:state.playerName, score: state.currentScore, time: state.totalTime})
+    const leaderBoard = await getLeaderboard(SUPABASE_CONFIG.TOP_LIMIT)
+    showLeaderBoard(leaderBoard)
+  } catch (err) {
+    console.error("Erreur Supabase : ", err)
+    showError(MESSAGES.LEADERBOARD_ERROR)
+  }
 }
 
 function restartQuiz() {
@@ -279,4 +297,39 @@ function restartQuiz() {
   resetTimer();
   startTimer();
   loadQuestions();
+}
+
+function showLeaderBoard(leaderBoard) {
+  const list = document.getElementById("leaderboardList");
+  
+  list.innerHTML = "";
+  
+  leaderBoard.forEach((l, i) => {
+    const li = document.createElement("li");
+    li.textContent = `${i + 1}. ${l.name} — ${l.score} pts — ${formatTime(l.time)}`;
+
+    list.appendChild(li);
+  });
+}
+
+const { createClient } = supabase;
+const supabaseClient = createClient(SUPABASE_CONFIG.URL, SUPABASE_CONFIG.KEY);
+
+async function addScore({ name, score, time }) {
+  const { error } = await supabaseClient
+    .from(SUPABASE_CONFIG.TABLE)
+    .insert([{ name, score, time }]);
+  if (error) throw error;
+}
+
+async function getLeaderboard(limit) {
+  const { data, error } = await supabaseClient
+    .from(SUPABASE_CONFIG.TABLE)
+    .select("name,score,time,created_at")
+    .order("score", { ascending: false })
+    .order("time", { ascending: true })
+    .limit(limit);
+
+  if (error) throw error;
+  return data ?? [];
 }
